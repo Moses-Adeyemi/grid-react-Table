@@ -4,9 +4,6 @@ import { AgGridReact } from 'ag-grid-react';
 import 'ag-grid-community/dist/styles/ag-grid.css';
 import 'ag-grid-community/dist/styles/ag-theme-alpine.css';
 
-
-
-
 const App = () => {
   const [rowData] = useState([
     { make: 'Toyota', model: 'Celica', price: 35000 },
@@ -53,12 +50,12 @@ const App = () => {
   ]);
 
   const [columnDefs] = useState([
-    { field: 'make' },
-    { field: 'model' },
-    { field: 'price' },
-    { field: 'make' },
-    { field: 'model' },
-    { field: 'price' },
+    { field: 'make', filter: true },
+    { field: 'model' , filter: true  },
+    { field: 'price', filter: true  },
+    { field: 'make' , filter: true },
+    { field: 'model', filter: true  },
+    { field: 'price' , filter: true },
   ]);
 
   return (
